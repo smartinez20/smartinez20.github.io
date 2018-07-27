@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>DolphinGram</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<link rel="stylesheet" href="profile.css" type="text/css" />
+
+<head>
+
+</head>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="#">DolphinGram</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Explore</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Trending</a>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
+</nav>
+
+<!-- Collapse button-->
+<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
+			<i class="fa fa-bars"></i>
+		</button>
+
+<div class="container">
+
+	<!--Collapse content-->
+	<div class="collapse navbar-toggleable-xs" id="collapseEx2">
+		<!--Navbar Brand-->
+		<a class="navbar-brand">Navbar</a>
+		<!--Links-->
+		<ul class="nav navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link">Messages</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link">Friends</a>
+			</li>
+			<li class="nav-item btn-group">
+				<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<a class="dropdown-item">Edit profile</a>
+					<a class="dropdown-item">Change password</a>
+					<a class="dropdown-item">Privacy settings</a>
+				</div>
+			</li>
+		</ul>
+
+		<ul class="nav navbar-nav nav-flex-icons">
+			<li class="nav-item"><a href="#!" class="nav-link"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+			<li class="nav-item"><a href="#!" class="nav-link"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+	<!--/.Collapse content-->
+
+</div>
+
+</nav>
+<!--/.Navbar-->
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyCBp_slWw0xvMNnldh4fjVuuO_f8WazTSw",
+		authDomain: "dolphingram-c79ac.firebaseapp.com",
+		databaseURL: "https://dolphingram-c79ac.firebaseio.com",
+		projectId: "dolphingram-c79ac",
+		storageBucket: "",
+		messagingSenderId: "826144979987"
+	};
+	firebase.initializeApp(config);
+</script>
+</head>
+
+<body>
+	<main>
+		<div class='container-wrapper'>
+			<div class="container">
+				<div class="row m-b-r m-t-3">
+					<div class="col-md-2 offset-md-1">
+						<img src="https://pbs.twimg.com/profile_images/683243860382728192/yBb1u9BV_400x400.jpg" alt="" class="img-circle img-fluid">
+					</div>
+					<div class="col-md-9 p-t-2">
+						<h2 class="h2-responsive">BestBoiBottlenose <button type="button" class="btn btn-info-outline waves-effect">Follow</button></h2>
+						<p>@SonyaLongJohnSmith</p>
+
+						<ul class="flex-menu">
+							<li><strong>41</strong> posts</li>
+							<li><strong>47k</strong> followers</li>
+							<li><strong>208</strong> following</li>
+						</ul>
+					</div>
+				</div>
+
+				<button id="post" class="submit">POST</button>
+				<div id='holder'>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script type="text/javascript" src="profile.js"></script>
+</body>
+
+</html>
